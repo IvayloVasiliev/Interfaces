@@ -2,24 +2,19 @@
 
 namespace BorderControl.Models
 {
-    public class Citizen : IIdentifiable, IBirthdable
+    public class Pet : IBirthdable
     {
         private string name;
-        private int age;
-        private string id;
         private string birthdate;
 
-        public Citizen(string name, int age, string id, string birthdate)
+        public Pet(string name, string birthdate)
         {
             Name = name;
-            Age = age;
-            Id = id;
             Birthdate = birthdate;
         }
 
         public string Name { get => name; private set => name = value; }
-        public int Age { get => age; private set => age = value; }
-        public string Id { get => id; private set => id = value; }
         public string Birthdate { get => birthdate; private set => birthdate = value; }
+        
     }
 }
