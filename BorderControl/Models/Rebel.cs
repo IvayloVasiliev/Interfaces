@@ -2,32 +2,29 @@
 
 namespace BorderControl.Models
 {
-    public class Citizen : IIdentifiable, IBirthdable, IBuyer
+    public class Rebel : IBuyer
     {
         private string name;
         private int age;
-        private string id;
-        private string birthdate;
+        private string group;
         private int food;
 
-        public Citizen(string name, int age, string id, string birthdate)
+        public Rebel(string name, int age, string group)
         {
             Name = name;
             Age = age;
-            Id = id;
-            Birthdate = birthdate;
+            Group = group;
             Food = 0;
         }
 
         public string Name { get => name; private set => name = value; }
         public int Age { get => age; private set => age = value; }
-        public string Id { get => id; private set => id = value; }
-        public string Birthdate { get => birthdate; private set => birthdate = value; }
+        public string Group { get => group; private set => group = value; }
         public int Food { get => food; set => food = value; }
 
         public void BuyFood()
         {
-            Food += 10;
+            Food += 5;
         }
     }
 }

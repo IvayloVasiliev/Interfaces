@@ -8,63 +8,55 @@ namespace BorderControl.Core
 {
     public class Engine
     {
-        private List<IIdentifiable> creatures;
-        private List<IBirthdable> birthdates;
+        private List<IBuyer> buyers;
 
         public Engine()
         {
-            creatures = new List<IIdentifiable>();
-            birthdates = new List<IBirthdable>();
+            buyers = new List<IBuyer>();
         }
 
         public void Run()
         {
-            string input = Console.ReadLine();
+            int  n = int.Parse(Console.ReadLine());
 
-            while (input != "End")
+            for (int i = 0; i < n; i++)
             {
-                string[] inputArgs = input.Split();
+                string[] inputArgs = Console.ReadLine().Split();
 
-                //Citizen Pesho 22 9010101122 10 / 10 / 1990
-                //Pet Sharo 13 / 11 / 2005
-                //Robot MK-13 558833251
-
-                if (inputArgs[0] == "Robot")
+                if (inputArgs.Length == 3)
                 {
-                    string model = inputArgs[1];
+                    string name = inputArgs[0];
+                    int age = int.Parse(inputArgs[1]);
+                    string group = inputArgs[2];
+
+                    IBuyer rebel = new Rebel(name, age, group);
+                    buyers.Add(rebel);
+                }
+                else
+                {
+                    string name = inputArgs[0];
+                    int age = int.Parse(inputArgs[1]);
                     string id = inputArgs[2];
+                    string birthdate = inputArgs[3];
 
-                    IIdentifiable robot = new Robot(model, id);
-                    creatures.Add(robot);
+                    IBuyer citizen = new Citizen(name, age, id, birthdate);
+                    buyers.Add(citizen);
                 }
-                else if (inputArgs[0] == "Citizen")
-                {
-                    string name = inputArgs[1];
-                    int age = int.Parse(inputArgs[2]);
-                    string id = inputArgs[3];
-                    string birthdate = inputArgs[4];
-
-                    IBirthdable citizen = new Citizen(name, age, id, birthdate);
-                    birthdates.Add(citizen);
-                }
-                else if (inputArgs[0] == "Pet")
-                {
-                    string name = inputArgs[1];
-                    string birthdate = inputArgs[2];
-
-                    IBirthdable pet = new Pet(name, birthdate);
-                    birthdates.Add(pet);
-                }
-
-              input = Console.ReadLine();
             }
 
-            string year = Console.ReadLine();
+            string command;
 
-            foreach (var item in birthdates.Where(x => x.Birthdate.EndsWith(year)))
+            while ((command = Console.ReadLine()) != "End")
             {
-                Console.WriteLine(item.Birthdate);
+                IBuyer buyer = buyers.SingleOrDefault(b => b.Name == command);
+
+                if (buyer != null)
+                {
+                    buyer.BuyFood();
+                }
             }
+
+            Console.WriteLine(buyers.Sum(b => b.Food));
         }
     }
 }
