@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferrari", "Ferrari\Ferrari.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplicitInterfaces", "ExplicitInterfaces\ExplicitInterfaces.csproj", "{12379AD4-6CCD-4546-AD89-4C6A04DC54A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionHierarchy", "CollectionHierarchy\CollectionHierarchy.csproj", "{8847310A-D409-4245-BC7E-0C32B17D9511}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{12379AD4-6CCD-4546-AD89-4C6A04DC54A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12379AD4-6CCD-4546-AD89-4C6A04DC54A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12379AD4-6CCD-4546-AD89-4C6A04DC54A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8847310A-D409-4245-BC7E-0C32B17D9511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8847310A-D409-4245-BC7E-0C32B17D9511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8847310A-D409-4245-BC7E-0C32B17D9511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8847310A-D409-4245-BC7E-0C32B17D9511}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
