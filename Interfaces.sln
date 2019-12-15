@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorderControl", "BorderCont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferrari", "Ferrari\Ferrari.csproj", "{6B1F4175-A008-4B56-8DE2-6EF0AB048906}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplicitInterfaces", "ExplicitInterfaces\ExplicitInterfaces.csproj", "{12379AD4-6CCD-4546-AD89-4C6A04DC54A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6B1F4175-A008-4B56-8DE2-6EF0AB048906}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B1F4175-A008-4B56-8DE2-6EF0AB048906}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B1F4175-A008-4B56-8DE2-6EF0AB048906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12379AD4-6CCD-4546-AD89-4C6A04DC54A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12379AD4-6CCD-4546-AD89-4C6A04DC54A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12379AD4-6CCD-4546-AD89-4C6A04DC54A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12379AD4-6CCD-4546-AD89-4C6A04DC54A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
